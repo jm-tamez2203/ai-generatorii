@@ -1,42 +1,107 @@
-#root {
-  max-width: 1280px;
+/* Contenedor general */
+.app-container {
+  width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  font-family: sans-serif;
+  color: #222;
+}
+
+/* Encabezado */
+.header-container {
   text-align: center;
+  margin-bottom: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-header {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0a2a66; /* azul oscuro */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description {
+  font-size: 1rem;
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Contenedor del chat */
+.chat-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
-.card {
-  padding: 2em;
+/* Estilo base del mensaje */
+.message {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
 }
 
-.read-the-docs {
-  color: #888;
+/* Mensaje del usuario */
+.user-message {
+  background-color: #e2e6ea;
+  color: #111;
+  text-align: right;
+  border-left: 4px solid #6c757d;
+}
+
+/* Mensaje del asistente */
+.assistant-message {
+  background-color: #ffffff;
+  color: #111;
+  text-align: left;
+  border-left: 4px solid #0d6efd;
+}
+
+/* Formulario del chat */
+.chat-input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.send-button {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.send-button:disabled {
+  background-color: #a0c5f2;
+  cursor: not-allowed;
+}
+
+.copy-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #1f4e79; /* azul oscuro */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #163d5c;
 }
